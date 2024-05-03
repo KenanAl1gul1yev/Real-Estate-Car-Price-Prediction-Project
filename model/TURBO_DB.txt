@@ -1,0 +1,30 @@
+GO
+use master
+CREATE DATABASE Turbo_AZ
+ON PRIMARY
+(
+    NAME = Turbo_AZ,
+    FILENAME = 'D:\Bases\Turbo_AZ.mdf',
+    SIZE = 50MB,
+    MAXSIZE = 250MB,
+    FILEGROWTH = 10%
+)
+GO
+use Turbo_AZ
+CREATE TABLE Cars(
+    ID INT IDENTITY(1, 1),
+    Model nvarchar(100),
+    Year SMALLINT,
+    Engine_Volume DECIMAL(3, 1),
+    Engine_Type nvarchar(20),
+    Horse_Power DECIMAL(6, 2),
+    Gearbox nvarchar(20),
+    Transmitter nvarchar(10),
+    Mileage INT,
+    Price NVARCHAR(20),
+    CONSTRAINT PK_Cars PRIMARY KEY(ID)
+)
+GO
+DBCC CHECKIDENT('Cars', RESEED, 0)
+GO
+UPDATE Cars set Engine_Volume = NULL where Engine_Volume = 0

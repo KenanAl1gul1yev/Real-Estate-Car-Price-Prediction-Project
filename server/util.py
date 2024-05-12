@@ -19,18 +19,10 @@ def get_estimated_price(car_model: str, engine_type: str, gearbox_type: str, tra
         car_model_index = __data_columns.index(f'model_{car_model.lower()}')
     except:
         car_model = 'other'
-    try:
-        engine_type_index = __data_columns.index(f'engine_type_{engine_type.lower()}')
-    except:
-        engine_type = 'benzin'
-    try:
-        gearbox_type_index = __data_columns.index(f'gearbox_{gearbox_type.lower()}')
-    except:
-        gearbox_type = 'avtomat'
-    try:
-        transmitter_type_index = __data_columns.index(f'transmitter_{transmitter_type.lower()}')
-    except:
-        transmitter_type = 'Tam'
+        car_model_index = 417
+    engine_type_index = __data_columns.index(f'engine_type_{engine_type.lower()}')
+    gearbox_type_index = __data_columns.index(f'gearbox_{gearbox_type.lower()}')
+    transmitter_type_index = __data_columns.index(f'transmitter_{transmitter_type.lower()}')
 
     X = np.zeros(len(__data_columns))
     X[0] = year
@@ -59,10 +51,10 @@ def load_saved_artifacts() -> None:
 
     with open('./artifacts/columns.json', 'r') as f:
         __data_columns = json.load(f)['data_columns']
-        __car_models = __data_columns[4: 417]
-        __engine_models = __data_columns[417: 422]
-        __gearbox_models = __data_columns[422: 426]
-        __transmitter_models = __data_columns[426:]
+        __car_models = __data_columns[4: 418]
+        __engine_models = __data_columns[418: 424]
+        __gearbox_models = __data_columns[424: 429]
+        __transmitter_models = __data_columns[429:]
         for i in range(len(__car_models)):
             __car_models[i] = __car_models[i][6:]
         for i in range(len(__engine_models)):
@@ -80,8 +72,6 @@ def load_saved_artifacts() -> None:
 
 if __name__ == '__main__':
     load_saved_artifacts()
-    for i in range(len(__data_columns)):
-        print(i, __data_columns[i])
     print(__car_models)
     print(__engine_models)
     print(__gearbox_models)

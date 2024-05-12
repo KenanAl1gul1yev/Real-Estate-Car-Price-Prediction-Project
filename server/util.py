@@ -14,7 +14,7 @@ __model = []
 
 
 def get_estimated_price(car_model: str, engine_type: str, gearbox_type: str, transmitter_type: str, year: int,
-                        engine_volume: float, horse_power: int, mileage: float) -> str:
+                        engine_volume: float, horse_power: float, mileage: float) -> str:
     try:
         car_model_index = __data_columns.index(f'model_{car_model.lower()}')
     except:

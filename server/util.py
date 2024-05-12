@@ -40,6 +40,22 @@ def get_estimated_price(car_model: str, engine_type: str, gearbox_type: str, tra
     return f'{ans}'
 
 
+def get_car_models():
+    return __car_models
+
+
+def get_engine_models():
+    return __engine_models
+
+
+def get_gearbox_models():
+    return __gearbox_models
+
+
+def transmitter_models():
+    return __transmitter_models
+
+
 def load_saved_artifacts() -> None:
     print('loading saved artifacts . . .start')
     global __car_models

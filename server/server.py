@@ -23,6 +23,15 @@ def get_estimated_price():
     return response
 
 
+@app.route('/get_car_models', methods=['GET', 'POST'])
+def get_car_models():
+    response = jsonify({
+        'car_models': util.get_car_models()
+    })
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+
 if __name__ == '__main__':
     print('Starting Python Flask Server For Car Price Prediction . . .')
     util.load_saved_artifacts()

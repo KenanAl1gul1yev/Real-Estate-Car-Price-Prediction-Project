@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Azerbaijan Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="img"></div>
+    <form class="form" action="#">
+      <h2>Engine Type</h2>
+      <div class="switch-field">
+        <input type="radio" id="radio-engine-type-1" name="uiEngineType" value="Benzin" checked/>
+        <label for="radio-engine-type-1">Benzin</label>
+        <input type="radio" id="radio-engine-type-2" name="uiEngineType" value="Dizel"/>
+        <label for="radio-engine-type-2">Dizel</label>
+        <input type="radio" id="radio-engine-type-3" name="uiEngineType" value="Elektro"/>
+        <label for="radio-engine-type-3">Elektro</label>
+        <input type="radio" id="radio-engine-type-4" name="uiEngineType" value="Hibrid"/>
+        <label for="radio-engine-type-4">Hibrid</label>
+        <input type="radio" id="radio-engine-type-5" name="uiEngineType" value="Plug-in Hibrid"/>
+        <label for="radio-engine-type-5">Plug-in Hibrid</label>
+        <input type="radio" id="radio-engine-type-6" name="uiEngineType" value="Qaz"/>
+        <label for="radio-engine-type-6">Qaz</label>
+      </div>
+      <h2>Engine Type</h2>
+      <div class="switch-field">
+        <input type="radio" id="radio-engine-type-1" name="uiEngineType" value="Benzin" checked/>
+        <label for="radio-engine-type-1">Benzin</label>
+        <input type="radio" id="radio-engine-type-2" name="uiEngineType" value="Dizel"/>
+        <label for="radio-engine-type-2">Dizel</label>
+        <input type="radio" id="radio-engine-type-3" name="uiEngineType" value="Elektro"/>
+        <label for="radio-engine-type-3">Elektro</label>
+        <input type="radio" id="radio-engine-type-4" name="uiEngineType" value="Hibrid"/>
+        <label for="radio-engine-type-4">Hibrid</label>
+        <input type="radio" id="radio-engine-type-5" name="uiEngineType" value="Plug-in Hibrid"/>
+        <label for="radio-engine-type-5">Plug-in Hibrid</label>
+        <input type="radio" id="radio-engine-type-6" name="uiEngineType" value="Qaz"/>
+        <label for="radio-engine-type-6">Qaz</label>
+      </div>
+      <h2>Year</h2>
+      <input
+        class="area floatLabel"
+        type="text"
+        id="uiSqft"
+        name="Squareft"
+        placeholder="exp: 2011"
+      />
+      <h2>Engine Volume</h2>
+      <input
+        class="area floatLabel"
+        type="text"
+        id="uiRooms"
+        name="Roomcount"
+        placeholder="exp: 2.0"
+      />
+      <div id="change_place">
+        <h2>Horse Power</h2>
+        <input
+          class="area floatLabel"
+          type="text"
+          id="uiFloor"
+          name="Floor"
+          placeholder="exp: 187"
+        />
+        <h2>Mileage</h2>
+        <input
+          class="area floatLabel"
+          type="text"
+          id="uiFloor2"
+          name="Floor2"
+          placeholder="exp: 198000"
+        />
+      </div>
+      <h2>Location</h2>
+      <div>
+        <div style="width: 76%">
+          <div class="box">
+            <div class="box-body">
+              <select
+                class="form-control selectpicker"
+                id="uiLocations"
+                data-live-search="true"
+              >
+                <option value=" " disabled="disabled">Choose a Location</option>
+                <option value="other">Diger...</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button class="submit" type="submit">Estimate Price</button>
+        <div id="uiEstimatedPrice" class="result"><h2></h2></div>
+      </div>
+    </form>
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css"
+      rel="stylesheet"
+    />
+  </body>
+</html>

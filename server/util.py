@@ -37,7 +37,7 @@ def get_estimated_price(car_model: str, engine_type: str, gearbox_type: str, tra
 
     ans = round(__model.predict([X])[0], 2)
 
-    return f'{ans}'
+    return f'{int(ans * 95 / 100): ,}  -  {int(ans * 105 / 100): ,}'
 
 
 def get_car_models():
